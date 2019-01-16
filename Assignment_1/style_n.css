@@ -11,36 +11,36 @@ body{
 	padding:1em;
 }
 .topnav {
-  border: 1px dotted grey;
-  background-color: white;
-  text-align: center;
-  box-sizing: border-box;  
-  width: 65%;
-  margin:auto;
-  height: 50px;
-  padding: 10px;
+  	border: 1px dotted grey;
+  	background-color: white;
+  	text-align: center;
+  	box-sizing: border-box;  
+  	width: 65%;
+  	margin:auto;
+  	height: 50px;
+  	padding: 10px;
 }
 .topnav a {
-  padding: 14px 16px;
-  color: #B41717;
-  text-align: center;
-  font-size: 25px;
+  	padding: 14px 16px;
+  	color: #B41717;
+  	text-align: center;
+  	font-size: 25px;
 }
 .img2 {
-  float: left;
+  	float: left;
 }
 .row {
-  display: flex;
-  overflow: auto;
-  margin: auto;
+  	display: flex;
+  	overflow: auto;
+  	margin: auto;
 }
 /* Create three equal columns that sits next to each other */
 .column {
-  flex: 33.33%;
-  padding: 20px;
-  overflow: auto;
-  margin: auto;
-  border-left-style: ridge;
+  	flex: 33.33%;
+  	padding: 20px;
+  	overflow: auto;
+  	margin: auto;
+  	border-left-style: ridge;
 }
 section#post{
 	float:center;
