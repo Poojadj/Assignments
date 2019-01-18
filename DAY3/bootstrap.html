@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">  
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="modal" data-target="#sem-login">Login</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>HOME</h3>
+      <p>The National Transportation Safety Committee of Indonesia on Monday announced the cockpit voice recorder from Lion Air Flight 610 has been recovered from the Java Sea. All 189 on the aircraft died when the flight came down last October.</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>A Boeing 707 cargo plane belonging to the Iranian military crashed into houses in Karaj, near Tehran, the Iranian capital, on Monday. All but one of the sixteen on-board died; no deaths were reported on the ground, with local media reporting no-one was in the houses.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>In late December, Indonesian cargo ship MV Namse Bangdzod vanished in local waters. The tanker, gross tonnage around 1,150 and loaded with crude palm oil, had over ten crewmembers. Wikinews examined data and contacted experts and local authorities in an effort to establish further details.</p>
+    </div>
+  </div>
+
+  <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-login">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body seminor-login-modal-body">
+         <h5 class="modal-title text-center">LOGIN TO MY ACCOUNT</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <form class="seminor-login-form">
+      <div class="form-group">
+        <input type="email" class="form-control" required autocomplete="off">
+        <label class="form-control-placeholder" for="name">Email address</label>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" required autocomplete="off">
+        <label class="form-control-placeholder" for="password">Password</label>
+      </div>
+      <div class="btn-check-log">
+          <button type="submit" class="btn-check-login">LOGIN</button>
+      </div> 
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
