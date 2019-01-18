@@ -73,3 +73,16 @@ body{
 ::placeholder {
   color: red;
 }
+
+/* when the input is checked */
+input:checked{
+	font-size: 23px;
+	background-color: red;
+	height: 20px;
+	color: red;
+}
+
+/* when the input typed is valid */
+input:valid{
+	background-color: green;
+}
