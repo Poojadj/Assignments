@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Via DOM property</title>
+        <style type="text/css">
+        .image-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+}
+        </style>
+        
+    </head>
+    <!--<body onload="init()">
+        <div id="cdiv"></div>
+        <img src="http://placehold.it/100x100" class="image-container" id ="im"/>
+    </body> -->
+    <body onload="init()">
+    <div id="cdiv"></div>
+        <img src="http://placehold.it/100x100" class="image-container" id ="im"/>
+    </body>
+<script>
+             
+            //     var ref=document.getElementById("cdiv");
+            //     document.addEventListener("keyup",dispmsg);
+            //     document.addEventListener("keydown",dispmsg1);
+                
+            // }
+
+            function init() {
+            var k;
+            document.onkeydown = function(e) {
+                    switch (e.keyCode) {
+                        case 37:
+                            dispmsg1(); //left
+                            break;
+                        case 39:
+                            dispmsg(); //right
+                            break;
+                        case 82: // r
+                            rotate();
+                            break;
+                        case 83: //s
+                            stopr(); 
+                            break;
+                                    }
+                                        };
+            function dispmsg(){
+                document.getElementById("im").style.marginRight=1;
+            }
+
+            function dispmsg1(){
+                document.getElementById("im").style.marginLeft=1;
+            }
+
+            function rotate(){
+               var x = document.getElementById('im');
+                    var xval= 10;
+                    var yval= 10;
+                    var angle= 10;
+                    var inte=setInterval(function(){
+                        xval=xval+20;
+                        yval=yval+20;
+                        angle=angle+20;
+                        x.style = "transform:translate( "+xval+'px'+','+yval+'px)';
+                        x.style = "transform:rotate( "+angle+"deg)";
+                    },300 )
+                    var k = setTimeout(function() {
+                    clearInterval(inte);},30000)
+            }
+        }
+
+        function stop1(){
+            clearTimeout(k);
+
+
+        }
+        </script>
+</html>
