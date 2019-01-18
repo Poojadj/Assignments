@@ -86,3 +86,25 @@ input:checked{
 input:valid{
 	background-color: green;
 }
+
+#bot{
+	border-bottom: ridge;
+}
+
+#space{
+	padding: 50px;
+}
+
+#log{
+	height: 48px;
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
+	background-color:#EC5252;
+	border: 1px solid transparent;
+}
+
+#align{
+	float:left;
+	margin: left;
+}
