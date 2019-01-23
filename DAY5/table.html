@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Two Forms With Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div class="hero-unit">
+    <h1> Assignment 2 </h1>
+   </div>
+    <div class="row">
+        <div class="span6">
+          <form class="form-signin" id="fome">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <input type="text" class="input-block-level" name="name" placeholder="Name" id="name" value="name">
+            <input type="text" class="input-block-level" placeholder="Native" id="native" value="Native"> 
+            <div class="btn-check-log" id="bot">
+              <input type="button" class="btn-check-login" id="log" value="LOGIN" onclick="AddData()">
+            </div>        
+        </div> 
+
+        <div class="span6" >
+          <form class="form-signin" id="fom">
+              <table style="width:100%" id="list">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Native</th> 
+                    <th>Delete</th>
+                 </tr>
+                </thead>
+               <tbody></tbody>
+              </table>
+          </form>    
+        </div>
+  </div>
+</div> <!-- /container -->
+</body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+
+        function AddData() {
+            var rows = ""; 
+            var name = document.getElementById("name").value;
+            var nativeval = document.getElementById("native").value;
+            rows += "<td>" + name + "</td><td>" +  nativeval + "</td>" + '<td><input type="button" id="delPOIbutton" style="background-color:#99ddff" value="Delete" onclick="deleteRow(this)" /></td>';
+            var tbody = document.querySelector("#list tbody");
+            var tr = document.createElement("tr");
+            tr.innerHTML = rows;
+            tbody.appendChild(tr);
+        }
+
+      function deleteRow(row){
+          var delrow=row.parentNode.parentNode;
+          console.log(delrow);
+          var tbody = document.querySelector("#list tbody");
+          tbody.removeChild(delrow);
+      }
+    </script>
+
+  
+</html>
