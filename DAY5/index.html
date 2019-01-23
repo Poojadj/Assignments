@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Two Forms With Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">   
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <div class="hero-unit">
+      <h1> Assignment 1 </h1>
+   </div>
+    <div class="row">
+        <div class="span6">
+          <form class="form-signin" id="formid" name="formid">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <input type="text" class="input-block-level" name="name" placeholder="Name" id="ty" value="name">
+            <b>Gender: </b> <input type="radio" value="Female" name="gender"> Female
+                            <input type="radio" value="Male" name="gender"> Male 
+                            <input type="radio" value="Other" name="gender"> Others <br> 
+            <b>City: </b>
+            <select name= "city" id ="sign-in" class="input-block-level" >
+                <option value="Pondi">Pondi</option>
+                <option value="Bangalore"> Bang</option>
+                <option value="Coorg">Coorg</option>
+                <option value="Patna">Patna</option>
+                <option value="DVG">DVG</option>
+                </select>
+            <textarea id="textid" value="des" name="des" placeholder"Description">Description  </textarea> <br>
+            <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+          </form>
+        </div>       
+        <div class="span6" id="preview">
+         
+        <h3> Entered Name is : </h3>
+          <p id="nameid">  </p>
+          <p id = "NameEnter" class="border" > </p>
+        <h3> Gender: </h3> 
+          <p id="genid" class="border"> </p>
+        <h3> City: </h3>
+        <p id="cityid" class="border"> </p>
+        <h3>  Description : </h3>
+          <p id="desid">  </p>
+          <p id = "desEnt" class="border" > </p>
+      </div>
+  </div>
+</div> 
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var obj = document.forms.formid;
+        var key = document.getElementById("ty");
+        key.onkeyup = function(){
+            document.getElementById("nameid").innerHTML=key.value;
+              if(obj.name.value.length < 10 || obj.name.value==''){
+                document.getElementById("NameEnter").innerHTML = "(name should be greater than 10)";
+                formIsValid = false;}
+              else{
+                document.getElementById("NameEnter").innerHTML = '<span class="color-red"> (Valid) </span>';
+                formIsValid = true;
+              }
+        }
+
+        var descriptionid = document.getElementById("textid");
+          descriptionid.onkeyup = function(){
+            document.getElementById("desid").innerHTML=descriptionid.value;
+            if(obj.des.value.length < 20 || obj.des.value==''){
+             document.getElementById("desEnt").innerHTML = "(name should be greater than 10)";
+              formIsValid = false;}
+            else{
+              //document.getElementById("o").style.color = "green";
+              document.getElementById("desEnt").innerHTML = '<span class="color-red"> (Valid)</span>';
+              formIsValid = true;
+            }
+        }
+
+
+        document.formid.onclick = function(){
+            var radVal = document.formid.gender.value;
+            genid.innerHTML = 'You selected: '+ '<span class="color-red">'+ radVal + '</span>';
+        }
+
+        var cityval = document.getElementById("sign-in");
+        cityval.onkeydown=function(){
+          document.getElementById("cityid").innerHTML ='You selected:'+ '<span class="color-red">'+ cityval.value+ '</span>';
+        }
+  
+    
+  
+    </script>
+
+  </body>
+</html>
